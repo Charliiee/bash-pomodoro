@@ -2,7 +2,8 @@
 
 SOURCEDIR="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 pomodoro_icon="pomodoro-icon.png"
-pomodoro_work="pomodoro-work.png"  # Change this to .ico for a second option
+pomodoro_work="pomodoro-work.png"
+pomodoro_work2="pomodoro-work.ico"
 pomodoro_sound="to-the-point.ogg"
 
 start_pomodoro() {
@@ -11,6 +12,7 @@ start_pomodoro() {
 $1
 
 $(date +%H:%M:%S)"
+
     paplay $SOURCEDIR/$pomodoro_sound
 }
 
@@ -19,14 +21,16 @@ short_break() {
     sleep 300 && notify-send -u critical -i $SOURCEDIR/$pomodoro_work "Back to work!
 
     $(date +%H:%M:%S)"
+
     paplay $SOURCEDIR/$pomodoro_sound
 }
 
 long_break() {
     # a short, 15 minute break
-    sleep 900 && notify-send -u critical -i $SOURCEDIR/$pomodoro_work "Back to work!
+    sleep 900 && notify-send -u critical -i $SOURCEDIR/$pomodoro_work2 "Back to work!
 
     $(date +%H:%M:%S)"
+
     paplay $SOURCEDIR/$pomodoro_sound
 }
 
