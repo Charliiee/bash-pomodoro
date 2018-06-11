@@ -39,4 +39,5 @@ start_pomodoro "(A short, 5 min, one)"; short_break;
 # Fourth pomodoro, take a longer break
 start_pomodoro "(Take a longer, 15 min, one now)"; long_break;
 
-$SOURCEDIR/$0
+# Start pomodoro again
+$SOURCEDIR/$(basename "$0")
