@@ -31,3 +31,5 @@ start_pomodoro; short_break;
 start_pomodoro; short_break;
 # Fourth pomodoro, take a longer break
 start_pomodoro; long_break;
+
+$SOURCEDIR/$0
