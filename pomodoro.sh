@@ -5,16 +5,19 @@ SOURCEDIR="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 start_pomodoro() {
     # 25 minute work
     sleep 1500 && notify-send -u critical -i $SOURCEDIR/pomodoro-icon.png "It's time to take a break!"
+    paplay $SOURCEDIR/to-the-point.ogg
 }
 
 short_break() {
     # a short, 5 minute break
     sleep 300 && notify-send -u critical -i $SOURCEDIR/pomodoro-work.png "Back to work!"
+    paplay $SOURCEDIR/to-the-point.ogg
 }
 
 long_break() {
     # a short, 15 minute break
     sleep 900 && notify-send -u critical -i $SOURCEDIR/pomodoro-work.png "Back to work!"
+    paplay $SOURCEDIR/to-the-point.ogg
 }
 
 # First pomodoro
