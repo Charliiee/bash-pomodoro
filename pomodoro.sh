@@ -7,19 +7,25 @@ pomodoro_sound="to-the-point.ogg"
 
 start_pomodoro() {
     # 25 minute work
-    sleep 1500 && notify-send -u critical -i $SOURCEDIR/$pomodoro_icon "It's time to take a break!"
+    sleep 1500 && notify-send -u critical -i $SOURCEDIR/$pomodoro_icon "It's time to take a break!
+
+    $(date +%H:%M:%S)"
     paplay $SOURCEDIR/$pomodoro_sound
 }
 
 short_break() {
     # a short, 5 minute break
-    sleep 300 && notify-send -u critical -i $SOURCEDIR/$pomodoro_work "Back to work!"
+    sleep 300 && notify-send -u critical -i $SOURCEDIR/$pomodoro_work "Back to work!
+
+    $(date +%H:%M:%S)"
     paplay $SOURCEDIR/$pomodoro_sound
 }
 
 long_break() {
     # a short, 15 minute break
-    sleep 900 && notify-send -u critical -i $SOURCEDIR/$pomodoro_work "Back to work!"
+    sleep 900 && notify-send -u critical -i $SOURCEDIR/$pomodoro_work "Back to work!
+
+    $(date +%H:%M:%S)"
     paplay $SOURCEDIR/$pomodoro_sound
 }
 
