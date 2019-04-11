@@ -6,6 +6,14 @@ if pidof -o %PPID -x $(basename "$0") > /dev/null; then
     exit 1
 fi
 
+# Check if any program is missing...
+if ! hash paplay 2>/dev/null; then
+    echo "Warning: paplay not installed... Please install it if you want pomodoro to play sounds" >&2
+fi
+if ! hash notify-send 2>/dev/null; then
+    echo "Warning: notify-send not installed... Please install it if you want pomodoro to display notifications" >&2
+fi
+
 SOURCEDIR="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 pomodoro_icon="pomodoro-icon.png"
 pomodoro_work="pomodoro-work.png"
