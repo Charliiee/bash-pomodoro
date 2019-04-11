@@ -33,14 +33,13 @@ long_break() {
     paplay $SOURCEDIR/$pomodoro_sound
 }
 
-# First pomodoro
-start_pomodoro "(A short, 5 min, one)"; short_break;
-# Second pomodoro
-start_pomodoro "(A short, 5 min, one)"; short_break;
-# Third pomodoro
-start_pomodoro "(A short, 5 min, one)"; short_break;
-# Fourth pomodoro, take a longer break
-start_pomodoro "(Take a longer, 15 min, one now)"; long_break;
-
-# Start pomodoro again
-$SOURCEDIR/$(basename "$0")
+while true; do
+    # First pomodoro
+    start_pomodoro "(A short, 5 min, one)"; short_break;
+    # Second pomodoro
+    start_pomodoro "(A short, 5 min, one)"; short_break;
+    # Third pomodoro
+    start_pomodoro "(A short, 5 min, one)"; short_break;
+    # Fourth pomodoro, take a longer break
+    start_pomodoro "(Take a longer, 15 min, one now)"; long_break;
+done
