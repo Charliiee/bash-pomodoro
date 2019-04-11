@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Don't run this in the same machine twice!
+if pidof -o %PPID -x $(basename "$0") > /dev/null; then
+    echo "Process already running" >&2
+    exit 1
+fi
+
 SOURCEDIR="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 pomodoro_icon="pomodoro-icon.png"
 pomodoro_work="pomodoro-work.png"
