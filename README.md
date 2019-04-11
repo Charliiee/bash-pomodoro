@@ -1,13 +1,23 @@
 # bash-pomodoro
-A Pomodoro Bash script for *unix users
+A Pomodoro Bash script for *unix users 🍅
 
-## Screenshot
+#### Using
 
-![desktop screenshot][screenshot-1]
+To use it, simply run
 
-![desktop screenshot][screenshot-2]
+```bash
+$ git clone https://github.com/Charliiee/bash-pomodoro
+$ cd bash-pomodoro
+$ ./pomodoro.sh
+```
 
-![desktop screenshot][screenshot-3]
+### Screenshots
+
+##### _Take a break_ notification ![desktop screenshot][screenshot-1]
+
+##### _Back to work_ notification ![desktop screenshot][screenshot-2]
+
+##### All notifications ![desktop screenshot][screenshot-3]
 
 [screenshot-1]: https://raw.githubusercontent.com/Charliiee/bash-pomodoro/master/Screenshot-1.png "Pomodoro 'Pause' example"
 [screenshot-2]: https://raw.githubusercontent.com/Charliiee/bash-pomodoro/master/Screenshot-2.png "Pomodoro 'back to work' example"
